@@ -74,6 +74,7 @@ int main(int argc, const char * argv[]) {
     InsertInfront(&root, 1);
     traverse(&root);
     CheckCycle(root);
+    /*make Cyclic Linked List*/
     Node a = {0,1};
     Node b = {0,2};
     Node c = {0,3};
