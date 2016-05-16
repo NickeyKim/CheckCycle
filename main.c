@@ -14,9 +14,9 @@ typedef struct Node{
     int value;
 }Node;
 /*
--Make slow pointer and fast pointer-
-slow pointer starts at the head
-fast pointer starts at the next of head
+-> Make slow pointer and fast pointer
+Slow pointer starts at the head
+Fast pointer starts at the next of head
 if fast gets to the NULL
     return true;
 else if fast == slow or fast->next ==slow
@@ -32,7 +32,7 @@ bool CheckCycle(Node *head){
     while(true)
     {
         if(!fast|| !fast->next){
-            printf("acyclic\n");
+            printf("Acyclic\n");
             return true;
         }
         else if (fast == slow || fast->next == slow){
@@ -73,6 +73,7 @@ int main(int argc, const char * argv[]) {
     InsertInfront(&root, 2);
     InsertInfront(&root, 1);
     traverse(&root);
+    printf("first: \n");
     CheckCycle(root);
     /*make Cyclic Linked List*/
     Node a = {0,1};
@@ -86,6 +87,7 @@ int main(int argc, const char * argv[]) {
     d.next = &e;
     e.next = &c;
     Node *head = &a;
+    printf("Second: \n");
     CheckCycle(head);
     
 }
